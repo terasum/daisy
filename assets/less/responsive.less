@@ -1,0 +1,326 @@
+// main: style.less
+
+/* Responsive */
+
+@media only screen and (max-width: 959px) {
+	
+	.bookmarks,
+	#errorpage,
+	#errorpage-search,
+	.pagenavi {
+		width: 720px;
+	}
+
+	.loop{
+		width: 740px;
+		
+		.post {
+			width: 350px;
+			margin: 0px 10px 20px 10px;
+			
+			.post-title {
+				max-width: 240px;
+				
+				h3 {
+					font-size: 0.9375em;
+				}
+			}
+			.post-thumb {
+				width: 340px;
+				height: auto;
+				
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+			.post-meta {
+				width: 100%;
+				bottom: 0;
+			}
+		}
+	}
+	.page-single {
+		width: 720px;
+		
+		.single-wrapper {
+			padding: 50px 50px 55px;
+
+			.date {
+				font-size: 0.8125em;
+			}
+		}
+	}
+		
+	.toolbar {
+		.tool {
+			opacity: 0.4;
+			
+			&:hover {
+				.ttip {
+					display: none;
+				}
+			}
+		}
+	}
+	.gallery {
+		img {
+			width: 160px;
+			height: 160px;
+			margin: 10px 0px;
+		}
+	}
+	#footer {
+		width: 720px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.bookmarks {
+		display: none;
+	}
+	#errorpage,
+	#errorpage-search,
+	.pagenavi {
+		width: 440px;
+	}
+	#errorpage {
+		height: 250px;
+	}
+	.loop {
+		display: block;
+		width: 440px;
+		
+		.taxonomy {
+			padding: 0px 10px 20px 5px;
+		}
+		
+		.post {
+			width: 100%;
+			height: auto;
+			margin: 0px 0px 20px 0px;
+			
+			.post-thumb {
+				position: relative;
+				display: block;
+				width: 430px;
+				height: auto;
+				
+				img {
+					position: relative;
+					margin: 0;
+					width: 100%;
+					height: auto;
+				}
+			}
+			.post-meta {
+				position: relative;
+				width: 100%;
+			}
+			.post-title {
+				max-width: 320px;
+				
+				h3 {
+					font-size: 1em;
+				}
+			}
+		}
+	}
+	.links-list {
+		li {
+			width: 100%;
+			
+			&:nth-child(4n+3), 
+		    &:nth-child(4n+4){
+		        background: #ECECEC;
+		    }
+		    &:nth-child(2n) {
+			    background: #f3f3f3;
+		    }
+		    &:hover {
+			    background: #3f3f3f;
+		    }
+		}
+	}
+	
+	.page-single {
+		width: 440px;
+		
+		.single-wrapper {
+			padding: 30px 20px 35px;
+			
+			.title h1 {
+				font-size: 1.5em;
+			}
+			.date {
+				font-size: 0.8125em;
+				margin-bottom: 20px;
+			}
+			.content {
+				img {
+					max-width: 100%;
+					height: auto;
+				}
+			}
+		}
+	}
+	
+	.gallery img {
+		width: 120px;
+		height: 120px;
+		margin: 5px 0px;
+	}
+	
+	#commentlist {
+		li {
+			margin-left: 0px !important;
+		}
+		.comment {
+			overflow: visible;
+		}
+		.comment-avatar {
+			width: 50px;
+			height: 50px;
+			overflow: visible;
+			
+			img {
+				width: 100%;
+				height: 100%;
+			}
+			.reply {
+				width: 60px;
+				height: 60px;
+				
+				a {
+					line-height: 50px;
+				}
+			}
+		}
+		.comment-wrapper {
+			padding-left: 60px;
+		}
+		.comment-entry p {
+			font-size: 0.875em;
+			
+		}
+	} 
+	
+	#respond{
+		width: 100%;
+	}
+	.respond_enlarge{
+		width: 440px !important;
+	}
+	
+	#footer {
+		width: 440px;
+	}
+	#copyright p:nth-child(1),
+	#copyright p:nth-child(2) {
+		float: none;
+		text-align: left;
+	}
+
+}
+@media only screen and (max-width: 480px) {
+	.topnav .sns_trigger {
+		display: none;
+	}
+	#errorpage-search,
+	.pagenavi {
+		width: 300px;
+	}
+	#errorpage {
+		width: 300px;
+		height: 200px;
+	}
+
+	.loop {
+		display: block;
+		width: 300px;
+		
+		.post {
+			width: 300px;
+			height: auto;
+			margin: 0px 0px 20px 0px;
+			
+			.post-thumb {
+				position: relative;
+				display: block;
+				width: 290px;
+				height: auto;
+				
+				img {
+					position: relative;
+					margin: 0;
+					width: 100%;
+					height: auto;
+				}
+			}
+			.post-title {
+				max-width: 190px;
+				h3 {
+					font-size: 0.9em;
+				}
+			}
+			.post-meta {
+				padding: 15px 10px 20px 10px;
+			}
+		}
+	}
+
+	.page-single {
+		width: 300px;
+		
+		.single-wrapper {
+			padding: 30px 20px 35px;
+			
+			.title h1 {
+				font-size: 1.125em;
+			}
+			.date {
+				font-size: 0.8em;
+				margin-bottom: 20px;
+			}
+			.content {
+				font-size: 0.875em;
+				
+				img {
+					max-width: 100%;
+					height: auto;
+				}
+			}
+			.gallery img {
+				width: 70px;
+				height: 70px;
+				margin: 5px 0px;
+			}
+		}
+	}
+	
+	#commentlist {
+		li {
+			
+		}
+		.comment-entry p {
+			font-size: 0.8125em;
+		}
+	}
+	
+	#respond {
+		width: 100%;
+	}
+	.respond_enlarge {
+		width: 300px !important;
+	}
+
+	#footer {
+		width: 100%;
+	}
+	#copyright p:nth-child(1),
+	#copyright p:nth-child(2) {
+		float: none;
+		text-align: left;
+	}
+}
+

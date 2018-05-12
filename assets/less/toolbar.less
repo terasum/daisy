@@ -1,0 +1,113 @@
+// main: style.less
+
+/* Single Toolbar */
+
+.toolbar {
+	position: fixed;
+    display: block;
+    left: 0px;
+    width: 62px;
+    z-index: 80;
+    opacity: 0;
+    -webkit-transition: left 0.2s, opacity 0.2s;
+    transition: left 0.2s, opacity 0.2s;
+    
+    &.single_toolbar {
+	    bottom: 20px;
+    }
+    .tool {
+        position: relative;
+        display: block;
+        margin-top: 20px; 
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        vertical-align: middle;
+        text-align: center;
+        border: 1px solid #ddd;
+        opacity: 0.5;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        -webkit-transition: opacity .3s;
+        transition: opacity .3s;
+        
+        &:before {
+	        position: absolute;
+	        top: 0;
+	        left: 0;
+	        width: 60px;
+	        height: 60px;
+	        text-align: center;
+	        font-size: 1.125em;
+        }
+        &.icon-share:before {
+	        font-size: 1.25em;
+        }
+        &:hover {
+	        opacity:1;
+	        .ttip {
+	            display:block;
+	        }
+        }
+        &.page_go_back {
+	        margin-top: 0px;
+	
+		    .icon {
+		        display: block;
+		        width: 100%;
+		        height: 100%;
+		        line-height: 60px;
+		        text-align: center;
+		        font-size: 1.25em;
+		        color: #444;
+		        -webkit-transition: all 0.2s;
+		        transition: all 0.2s;
+		    }
+		    .ttip {
+		        top: 0px;
+		    }
+        }
+        a {
+	        position: relative;
+	        display: block;
+	        width: 100%;
+	        height: 100%;
+        }
+        .ttip {
+            position: absolute;
+            background: rgba(0,0,0,0.8);
+            color: #fff;
+            width: 60px;
+            line-height: 40px;
+            vertical-align: middle;
+            text-align: center;
+            right: -72px;
+            margin: 9px 0px;
+            display: none;
+            font-size: 0.8125em;
+            overflow: visible;
+			
+			&:after {
+				position: absolute;
+				display: block;
+				content: "";
+	            height: 0px;
+	            width: 0px;
+	            left: -14px;
+	            top: 12px;
+	            border: 7px solid transparent;
+	            border-right-color: rgba(0,0,0,0.8);
+	        }
+        }
+    }
+    .go_top {
+    	
+	}
+	.go_bottom {
+	    &:before {
+		    -webkit-transform: rotate(180deg);
+		    transform: rotate(180deg);
+	    }
+	}
+}

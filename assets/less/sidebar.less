@@ -1,0 +1,218 @@
+// main: style.less
+
+/* Sidebar */
+
+.sidebar {
+    position: absolute;
+    z-index: 90;
+    left: -280px;
+    top: 60px;
+    height: auto;
+    width: 60px;
+    border-right: 1px solid #ddd;
+    background: #fff;
+	box-shadow: 0px 0px 30px rgba(0,0,0,0.15);
+    -webkit-transition: left 0.24s, width 0.24s;
+    transition: left 0.24s, width 0.24s;
+    overflow: hidden;
+    
+    &.menu_thin {
+	    left: 0px;
+    }
+    &.menu_fat {
+	    left: 0px;
+	    width: 280px;
+    }
+}
+.sidebar_slider {
+    position: relative;
+    height: auto;
+    overflow-y: hidden;
+    width: 280px;
+    
+    ul {
+        list-style: none;
+        
+        li.nav {
+            display: block;
+            position: relative;
+            height: 60px;
+            border-bottom: 1px solid #ddd;
+            
+            &:hover {
+	            background: @menu_hover_bg;
+	            
+	            a,
+	            .icon,
+	            .searchinput {
+                	color: #fff;
+            	}
+            }
+            .icon {
+	            display: block;
+	            width: 60px;
+	            height: 60px;
+	            line-height: 59px;
+	            text-align: center;
+	            font-size: 1.125em;
+	            vertical-align: middle;
+	            
+	            &.icon-account-circle {
+		            font-size: 1.3em;
+	            }
+            }
+            a {
+	            position: absolute;
+                height: 60px;
+                width: 100%;
+                top: 0;
+                left: 0;
+                padding-left: 60px;
+                line-height: 60px;
+                background: transparent;
+                color: #777;
+                font-size: 1em;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+        }
+    }
+}
+
+/* Search Form */
+
+.searchinput {
+    height: 28px;
+    width: 200px;
+    line-height: 24px;
+    margin: 16px 0px;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+/* Social Networks List */
+
+.snslist {
+    position: absolute;
+    right: -240px;
+    top: 60px;
+    width: 230px;
+    overflow: hidden;
+    border-left: 1px solid #ddd;
+    background: #fff;
+	box-shadow: 0px 1px 30px rgba(0,0,0,0.1);
+    -webkit-transition: all 0.24s;
+    transition: all 0.24s;
+    z-index: 90;
+    
+    &.snslist_tall {
+	    right: 0px;
+    }
+}
+.snslist_slider {
+    position: relative;
+    width: 280px;
+    vertical-align: middle;
+    color: #666;
+    
+    ul {
+        list-style:none;
+        
+        li {
+	        display: block;
+            position: relative;
+            width: 100%;
+            height: 60px;
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+            
+            &:hover {
+            	background: #f3f3f3;
+        	}
+            a {
+                display: block;
+                
+                &:before {
+	                content: "";
+	                display: block;
+	                position: absolute;
+	                top: 0;
+	                bottom: 0;
+	                left: 0;
+	                right: 0;
+                }
+            }
+            div {
+                display: block;
+                float: left;
+                margin-left: 10px;
+                
+                p {
+                    vertical-align: middle;
+                    
+					&.first {
+                    	font-size: 0.8125em;
+						font-weight: normal;
+						color: #555;
+                	}
+					&.last {
+                    	font-size: 0.75em;
+						color: #999;
+                	}
+                }
+            }
+        }  
+    }
+    .sns {
+        display: block;
+        float: left;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        line-height: 40px;
+        vertical-align: middle;
+        text-align: center;
+        color: #fff;
+        font-size: 1.25em;
+        
+        &.twitter {
+			color: #55ACEE;
+		}
+		&.facebook {
+			color: #3B5998;
+		}
+		&.sina-weibo {
+			color: #FF9933;
+		}
+		&.googleplus {
+			color: #DD4B39;
+		}
+		&.github {
+			color: #4183C4;
+		}
+		&.pinterest {
+			color: #D11E16;
+		}
+		&.qq {
+			color: #FFC028;
+		}
+		&.tumblr {
+			color: #36465D;
+		}
+		&.linkedin {
+			color: #0073B2;
+		}
+		&.renren {
+			color: #217DC6;
+		}
+		&.dribbble {
+			color: #EA4C89;
+		}
+		&.email {
+			color: @green;
+		}
+    }
+}

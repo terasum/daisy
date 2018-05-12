@@ -1,0 +1,120 @@
+// main: style.less
+
+/* Fonts */
+
+@font-face {
+    font-family: 'roboto';
+    src: url('../fonts/Roboto-Regular-webfont.eot');
+    src: url('../fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Regular-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'roboto';
+    src: url('../fonts/Roboto-Italic-webfont.eot');
+    src: url('../fonts/Roboto-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Italic-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Italic-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Italic-webfont.svg#robotoitalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'roboto';
+    src: url('../fonts/Roboto-Bold-webfont.eot');
+    src: url('../fonts/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Bold-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Bold-webfont.svg#robotobold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'roboto';
+    src: url('../fonts/Roboto-Thin-webfont.eot');
+    src: url('../fonts/Roboto-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Thin-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Thin-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Thin-webfont.svg#robotothin') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* reset */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+html {
+    height: 100%;
+    max-height: 100%;
+}
+body {
+    position: relative;
+    width: 100%;
+    font-size: 1em;
+    font-family: "roboto", "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", sans-serif;
+    color: @primary_text;
+    overflow-x: hidden;
+    z-index: 0;
+    height: 100%;
+    max-height: 100%;
+}
+a {
+    text-decoration: none;
+    color: @primary_text;
+    cursor: pointer;
+    -webkit-transition: all 0.24s;
+    transition: all 0.24s;
+    font-weight: lighter;
+    &:hover {
+	    color: #454648;
+    }
+}
+.clear {
+    clear: both;
+}
+.cf {
+    zoom: 1;
+    &:after {
+    	clear: both;
+	}
+	&:before, 
+	&:after {
+    	content: "";
+		display: table;
+	}
+}
+.none {
+    display: none;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+input {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+/* The Universe */
+
+#universe {
+	position: relative;
+    width: 100%;
+	overflow: hidden;
+}
+
+/* Initialize SVG icon set */
+

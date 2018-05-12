@@ -1,0 +1,52 @@
+// main: style.less
+
+/* Footer */
+
+footer {
+	position: relative;
+    margin: 30px auto;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    
+}
+.copyright {
+	width: 80%;
+    margin: 20px auto;
+    position: relative;
+    p {
+        font-weight:lighter;
+        color: #000;
+        letter-spacing: 1px;
+        font-size: 12px;
+        font-family: roboto;
+        
+    }
+}
+
+.back2top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 999;
+    cursor: pointer;
+    background-color: rgba(0,0,0,.48);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 3px;
+    -webkit-transform: translate3d(200px,0,0);
+    transform: translate3d(200px,0,0);
+    -webkit-transition: .5s;
+    transition: .5s
+}
+
+.back2top.is-active {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+}
+
+.back2top svg {
+    fill: #fff
+}

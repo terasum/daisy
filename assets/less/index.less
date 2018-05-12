@@ -1,0 +1,71 @@
+#page {
+    height: 100%;
+}
+
+.container {
+    max-width: 1024px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%
+}
+
+
+.post-image {
+    display: block;
+    height: 540px;
+    background-size: cover;
+    background-position: 50%;
+    position: relative
+}
+
+@media (max-width:640px) {
+    .post-image {
+        height: 200px
+    }
+}
+
+.post-item {
+    position: relative;
+    margin: 0 auto 30px auto;
+    background-color: #fff;
+    width: 90%;
+    .info-mask {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: transparent -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, .4)) repeat scroll 0 0;
+        background: transparent linear-gradient(180deg, transparent 0, rgba(0, 0, 0, .4)) repeat scroll 0 0;
+        
+        .post-time{
+                 font-weight: lighter;
+                color: #fdfdfd;
+            
+        }
+        .post-tags{
+            a{
+                font-weight: lighter;
+                color: #fdfdfd;
+                &:hover{
+                    color: #fff;
+                }
+            }
+        }
+        .post-title{
+            a{
+                font-weight: lighter;
+                color: #fdfdfd;
+                &:hover{
+                    color: #fff;
+                }
+            }
+        }
+    }
+    &:hover {
+        .info-mask {
+            background: transparent -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, .8)) repeat scroll 0 0;
+            background: transparent linear-gradient(180deg, transparent 0, rgba(0, 0, 0, .8)) repeat scroll 0 0
+        }
+    }
+}
