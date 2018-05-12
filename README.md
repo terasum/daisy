@@ -30,7 +30,7 @@ then you need do some installation steps on `http://localhost:8080`
 
 > Note: the `Daisy` theme has already installed in test wordpress env, you just need active it (Dashboard > Appearance > Themes).
 
-### 2. webpack
+### Step 2. webpack
 
 webpack has already configured, but you have to run this command first:
 
