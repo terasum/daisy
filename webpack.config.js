@@ -26,8 +26,6 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'build'),
     filename: '[name]',
-    chunkFilename: '[id]',
-
   },
   resolve: {
     extensions: ['.js', '.css', '.less'],
@@ -37,7 +35,7 @@ module.exports = {
     headers: { 'Access-Control-Allow-Origin': '*' },
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.less$/,
         use: ExtractTextPlugin.extract({
@@ -67,7 +65,7 @@ module.exports = {
           useRelativePath:false,
           name:'[name].[ext]',
           outputPath:'fonts/',
-          publicPath: '../'
+          publicPath: '../fonts'
       }
       },
       { test: /\.(ttf|eot|svg)(\?.*)?$/i,
@@ -76,7 +74,7 @@ module.exports = {
           useRelativePath:false,
           name:'[name].[ext]',
           outputPath:'fonts/',
-          publicPath: '../'
+          publicPath: '../fonts'
         }
       },
       { test: /\.(png|jpe?g|gif)(\?.*)?$/i,
@@ -86,7 +84,7 @@ module.exports = {
           useRelativePath:false,
           name:'[name].[ext]',
           outputPath:'img/',
-          publicPath: '../'
+          publicPath: '../img'
         }
       },
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader', query: { presets: ['env'], cacheDirectory: true } },
