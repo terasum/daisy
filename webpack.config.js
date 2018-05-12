@@ -10,6 +10,10 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 // take debug mode from the environment
 const debug = (process.env.NODE_ENV !== 'production');
 
+
+const rootAssetPath = path.join(__dirname, 'assets');
+
+
 module.exports = {
   // configuration
   context: __dirname,
@@ -18,12 +22,12 @@ module.exports = {
     'css/style.css': [
       path.join(__dirname, 'assets', 'less', 'style.less'),
     ],
-    // 'img/*':'./assets/img/*',
   },
   output: {
     path: path.join(__dirname, 'build'),
     filename: '[name]',
     chunkFilename: '[id]',
+
   },
   resolve: {
     extensions: ['.js', '.css', '.less'],
@@ -34,10 +38,6 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.html$/, loader: 'raw-loader' },
-      // { test: /\.less$/, loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader!less-loader' }) },
-      // { test: /\.css$/, loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' }) },
-
       {
         test: /\.less$/,
         use: ExtractTextPlugin.extract({
@@ -49,7 +49,7 @@ module.exports = {
               sourceMap: true
             }
           },
-
+          {loader: 'resolve-url-loader'},
           {
             loader: "less-loader",
             options: {
@@ -63,29 +63,30 @@ module.exports = {
         loader: 'url-loader',
         options:{
           limit:10000,
-          useRelativePath:true,
           mimetype:'application/font-woff',
+          useRelativePath:false,
           name:'[name].[ext]',
-          outputPath:'build/fonts/',
-          // publicPath: 'build/'
+          outputPath:'fonts/',
+          publicPath: '../'
       }
       },
       { test: /\.(ttf|eot|svg)(\?.*)?$/i,
         loader: `file-loader` ,
         options:{
-          useRelativePath:true,
+          useRelativePath:false,
           name:'[name].[ext]',
-          outputPath:'build/fonts/',
-          // publicPath: 'build/'
+          outputPath:'fonts/',
+          publicPath: '../'
         }
       },
       { test: /\.(png|jpe?g|gif)(\?.*)?$/i,
-        loader: `file-loader`,
+        loader: `url-loader`,
         options:{
-          useRelativePath:true,
+          limit:1024,
+          useRelativePath:false,
           name:'[name].[ext]',
-          outputPath:'build/img/',
-          // publicPath: 'build/'
+          outputPath:'img/',
+          publicPath: '../'
         }
       },
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader', query: { presets: ['env'], cacheDirectory: true } },
